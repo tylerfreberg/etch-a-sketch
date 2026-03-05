@@ -1,11 +1,19 @@
 let container = document.querySelector("#container");
-let fragment = document.createDocumentFragment()
+let fragment = document.createDocumentFragment();
+let gridSize = 0
 
-for (i = 0; i < 6400; i++) {
+while (gridSize < 1) {
+    gridSize = prompt("Please enter a desired grid size.");
+
+    if (gridSize < 1 || gridSize > 100) {
+        gridSize = 0;
+    }
+}
+container.style.setProperty("--gridSize", gridSize);
+
+for (i = 0; i < (gridSize*gridSize); i++) {
     let square = document.createElement("div");
     square.style.backgroundColor = "gray";
-    square.style.height = "10px";
-    square.style.width = "10px";
     square.classList.add("square")
     fragment.appendChild(square);
 }

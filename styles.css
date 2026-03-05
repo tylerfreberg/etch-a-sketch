@@ -8,6 +8,7 @@ body {
 }
 
 #container {
+    --gridSize: 20;
     width: 800px;
     height: 800px;
     display: flex;
@@ -15,4 +16,10 @@ body {
     justify-content: center;
     align-items: center;
     gap: 0px;
+}
+
+.square {
+    flex: 0 0 calc(100% / var(--gridSize));
+
+    aspect-ratio: 1/1;
 }
