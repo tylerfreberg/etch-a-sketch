@@ -5,6 +5,8 @@ body {
     margin: 0;
     height: 100vh;
     background-color: beige;
+    flex-direction: column;
+    gap: 20px;
 }
 
 #container {
@@ -16,10 +18,22 @@ body {
     justify-content: center;
     align-items: center;
     gap: 0px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .square {
     flex: 0 0 calc(100% / var(--gridSize));
-
     aspect-ratio: 1/1;
+}
+
+.shake-animation {
+    animation: shake .5s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 50%, 90%{ transform: translateX(-5px); }
+  30%, 70% { transform: translateX(5px); }
 }
