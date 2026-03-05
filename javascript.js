@@ -12,10 +12,21 @@ for (i = 0; i < 6400; i++) {
 
 container.appendChild(fragment);
 
+let isDrawing = false;
 let squares = document.querySelectorAll(".square");
 
+container.addEventListener("mousedown", () => isDrawing = true)
+container.addEventListener("mouseup", () => isDrawing = false)
+
 squares.forEach(square => {
+
     square.addEventListener("mouseover", () => {
+        if (isDrawing) {
+            square.style.backgroundColor = "white";
+        }
+    })
+
+    square.addEventListener("click", () => {
         square.style.backgroundColor = "white";
-    })   
+    })
 })
