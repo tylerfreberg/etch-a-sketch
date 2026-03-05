@@ -1,9 +1,12 @@
 let input = document.querySelector("form");
+let gridSize;
 
 input.addEventListener("submit", function(event) {
     event.preventDefault();
-    let gridSize = input.querySelector("#gridSize").value;
+    gridSize = input.querySelector("#gridSize").value;
     if (gridSize > 0 && gridSize < 101) {
+        input.querySelector("#gridSize").value = "";
+        input.querySelector("#gridSize").blur();
         createGrid(gridSize);
         console.log('success');
     }
@@ -11,9 +14,15 @@ input.addEventListener("submit", function(event) {
         input.classList.add("shake-animation");
         console.log('failure');
         input.addEventListener("animationend", () => {
-            //input.classList.remove("shake-animation");
+            input.classList.remove("shake-animation");
         })
     }
+})
+
+let clearbutton = document.querySelector("#clearscreen");
+
+clearbutton.addEventListener("click", () => {
+    createGrid(gridSize);
 })
 
 
