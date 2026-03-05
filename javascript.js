@@ -47,8 +47,8 @@ function createGrid(val) {
     let isDrawing = false;
     let squares = document.querySelectorAll(".square");
 
-    container.addEventListener("mousedown", () => isDrawing = true)
-    container.addEventListener("mouseup", () => isDrawing = false)
+    window.addEventListener("mousedown", () => isDrawing = true)
+    window.addEventListener("mouseup", () => isDrawing = false)
 
     squares.forEach(square => {
 
