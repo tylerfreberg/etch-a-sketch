@@ -11,7 +11,7 @@ input.addEventListener("submit", function(event) {
         input.classList.add("shake-animation");
         console.log('failure');
         input.addEventListener("animationend", () => {
-            input.classList.remove("shake-animation");
+            //input.classList.remove("shake-animation");
         })
     }
 })
@@ -28,7 +28,7 @@ function createGrid(val) {
 
     for (i = 0; i < (gridSize*gridSize); i++) {
         let square = document.createElement("div");
-        square.style.backgroundColor = "gray";
+        square.style.backgroundColor = "beige";
         square.classList.add("square")
         fragment.appendChild(square);
     }
@@ -45,12 +45,12 @@ function createGrid(val) {
 
         square.addEventListener("mouseover", () => {
             if (isDrawing) {
-                square.style.backgroundColor = "white";
+                square.style.backgroundColor = "gray";
             }
         })
 
         square.addEventListener("click", () => {
-            square.style.backgroundColor = "white";
+            square.style.backgroundColor = "gray";
         })
     })
 }

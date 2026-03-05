@@ -4,7 +4,7 @@ body {
     align-items: center;
     margin: 0;
     height: 100vh;
-    background-color: beige;
+    background-color: #fcb1a9;
     flex-direction: column;
     gap: 20px;
 }
@@ -18,7 +18,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 0px;
-    background-color: white;
+    background-color: #a16948;
     border-radius: 10px;
     overflow: hidden;
 }
