@@ -38,7 +38,7 @@ function createGrid(val) {
     for (i = 0; i < (gridSize*gridSize); i++) {
         let square = document.createElement("div");
         square.style.backgroundColor = "beige";
-        square.classList.add("square")
+        square.classList.add("square");
         fragment.appendChild(square);
     }
 
@@ -47,8 +47,8 @@ function createGrid(val) {
     let isDrawing = false;
     let squares = document.querySelectorAll(".square");
 
-    window.addEventListener("mousedown", () => isDrawing = true)
-    window.addEventListener("mouseup", () => isDrawing = false)
+    window.addEventListener("mousedown", () => isDrawing = true);
+    window.addEventListener("mouseup", () => isDrawing = false);
 
     squares.forEach(square => {
 
